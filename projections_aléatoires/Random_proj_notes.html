@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <head>
 
-<title>Random proj</title>
+<title>Random projections-subspace filling</title>
 
-<script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script> 
+<script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
 <script  src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.1.1/jquery.contextMenu.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.11/js/min/perfect-scrollbar.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/store.js/1.3.20/store.min.js"></script>
-  
+
 <!-- ####### Straptoc -->
 <script  src="https://cdn.rawgit.com/strablabla/Tinkering/e3d2059/js/straptoc/straptoc.js"></script>
-<link rel="stylesheet" href="https://cdn.rawgit.com/strablabla/Tinkering/e3d2059/js/straptoc/straptoc.css"> 
+<link rel="stylesheet" href="https://cdn.rawgit.com/strablabla/Tinkering/e3d2059/js/straptoc/straptoc.css">
 <!-- CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.1.1/jquery.contextMenu.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.11/css/perfect-scrollbar.css">
@@ -39,7 +39,7 @@
 </script>
 
 <xmp theme="simplex" style="display:none;">
-    
+
 # Demo of space retrieval
 
 
@@ -53,50 +53,50 @@ $\Omega_i \approx \mathcal{N} (0,1) $
 
 ## Equation d'évolution
 
-$z' =  -\dfrac{Mz}{|Mz|} $
+$$z' =  -\dfrac{Mz}{|Mz|} $$
 
 M is a diagonal matrix
 
-rewriting 
+rewriting
 
 $w =  Mz $
 
-we have 
+we have
 
-$ z' = -M\dfrac{z}{|z|} $
+$$ w' = -M\dfrac{w}{|w|} $$
 
 passing to complex notation
 
-$z' =  \rho e^{i\theta} $
+$w' =  \rho e^{i\theta} $
 
 with $\gamma$ as the complex value for $M$
 
-$ \rho'e^{i\theta}+i \rho e^{i\theta} \theta' = -\gamma e^{i\theta} $ 
+$$ \rho'e^{i\theta}+i \rho e^{i\theta} \theta' = -\gamma e^{i\theta} $$
 
-which simplify in 
+which simplifies in
 
-$ \rho'+i \rho \theta' = -\gamma $ 
+$$ \rho'+i \rho \theta' = -\gamma $$
 
-hence
+hence we obtain two equations
 
-$ \rho' = Re(-\gamma) $
+$$ \rho' = Re(-\gamma) $$
 
-$ \rho \theta' = Im(-\gamma) $
+$$ \rho \theta' = Im(-\gamma) $$
 
 This means that
 
-$\rho = \kappa t + cte$ 
+$$\rho = \kappa t + cte$$
 
-$\theta = ln(\dfrac{\rho }{\rho_0})$ 
+$$\theta = ln(\dfrac{\rho }{\rho_0})$$
 
 $ \alpha $ vecteur $\textit{remplissage}$
 
 $ |\alpha| = k $ le rang
 
 
-Est ce correct ? 
+Est ce correct ?
 
-* Code python :: 
+* Code python ::
 	* ```
 	    def subspace_filling_with_rank(self, debug=1):
         '''
@@ -104,7 +104,7 @@ Est ce correct ?
         '''
         # print('######## in subspace_filling_with_rank  ')
         if self.iter == 0:
-            self.separate_signal_from_noise()                                   # 
+            self.separate_signal_from_noise()                                   #
             self.psig = norm(self.spec_trunc)**2                                            # Calculation of the signal power
             self.pnoise = norm(self.spec - self.spec_trunc)**2                              # Calculation of the noise power
             self.iter += 1
