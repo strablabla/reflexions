@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8">
+<head>
+
+<title>Wendel's theorem</title>
+
+<script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+<script  src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.1.1/jquery.contextMenu.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.11/js/min/perfect-scrollbar.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/store.js/1.3.20/store.min.js"></script>
+
+<!-- ####### Straptoc -->
+<script  src="https://cdn.rawgit.com/strablabla/Tinkering/e3d2059/js/straptoc/straptoc.js"></script>
+<link rel="stylesheet" href="https://cdn.rawgit.com/strablabla/Tinkering/e3d2059/js/straptoc/straptoc.css">
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.1.1/jquery.contextMenu.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.11/css/perfect-scrollbar.css">
+<!-- Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Solid' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Enriqueta' rel='stylesheet' type='text/css'>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--  1ecab69-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+<xmp theme="simplex" style="display:none;">
+
+# Wendel
+
+## Principe..
+
+On cherche à partitionner de manière à évaluer la probabilité.
+
+### Cas 2D
+
+Pour chaque point on évalue une probabilité pour que tous les autres soient du même côté..
+Cette proba englobe toutes les autres proba pour ce point.
+
+### Cas 3D
+
+Pour chaque point (plans avec 2 degrés de liberté) on évalue proba pour que tous les autres points soient de l'autre côté.
+On voit qu'en fait pour chaque point on se ramène au cas de la 2D.. pê avec facteur 2 (deux points superposés pr chaque coupe)..
+
+### Cas général
+
+Pour chaque point on prend la famille de plan dont il est le plus proche et on dénombre..
+Pour chaque couple de point on prend la famille de plans dont ils sont les plus proches et on dénombre..
+Pour chaque triplet de points ...
+Les partitions sont faites autour de la notion de proximité.
+
+
+
+
+
+
+
+
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+<script> maketoc() </script>
+
+</html>
